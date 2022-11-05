@@ -95,7 +95,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  //Step12
+  //Step2
   setTimer1(100);
   setTimer2(1000);
   value = 0;
