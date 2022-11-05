@@ -22,7 +22,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "global.h"
+#include "fsm_run.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -94,8 +95,19 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  //Step1
+  setTimer1(100);
+  setTimer2(1000);
+  value = 0;
+  mode = INIT;
   while (1)
   {
+	if (timer1_flag == 1) {
+		setTimer1(100);
+		HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
+	}
+
+	fsm_simple_buttons_run();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -218,7 +230,10 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
-
+	timerRun();
+	getKeyDec();
+	getKeyInc();
+	getKeyReset();
 }
 /* USER CODE END 4 */
 
