@@ -95,7 +95,10 @@ void getKeyInc() {
 		} else {
 			timeOutButton2--;
 			if (timeOutButton2 <= 0) {
-				keyRegButton2_4 = NORMAL_STATE;
+				if (keyRegButton2_4 == PRESSED_STATE) {
+					timeOutButton2 = 100;
+					subKeyProcess2();
+				}
 			}
 		}
 	}
@@ -115,7 +118,10 @@ void getKeyDec() {
 		} else {
 			timeOutButton3--;
 			if (timeOutButton3 <= 0) {
-				keyRegButton3_4 = NORMAL_STATE;
+				if (keyRegButton3_4 == PRESSED_STATE) {
+					timeOutButton3 = 100;
+					subKeyProcess3();
+				}
 			}
 		}
 	}

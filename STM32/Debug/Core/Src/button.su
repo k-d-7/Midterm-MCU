@@ -6,4 +6,4 @@ button.c:56:6:subKeyProcess2	4	static
 button.c:60:6:subKeyProcess3	4	static
 button.c:64:6:getKeyReset	8	static
 button.c:84:6:getKeyInc	8	static
-button.c:104:6:getKeyDec	8	static
+button.c:108:6:getKeyDec	8	static
