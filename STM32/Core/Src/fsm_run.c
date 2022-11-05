@@ -19,9 +19,9 @@ void fsm_simple_buttons_run() {
 				setTimer2(1000);
 				mode = INC_STATE;
 			}
-			if (timer2_flag == 1) {
-				mode = COUNTDOWN_STATE;
-			}
+//			if (timer2_flag == 1) {
+//				mode = COUNTDOWN_STATE;
+//			}
 			break;
 
 		case RESET_STATE:
@@ -43,13 +43,13 @@ void fsm_simple_buttons_run() {
 			mode = DISPLAY;
 			break;
 		case COUNTDOWN_STATE:
-			value--;
-			setTimer2(100);
-			if (value < 0) {
-				value = 0;
-				timer2_flag = 0;
-			}
-			mode = DISPLAY;
+//			value--;
+//			setTimer2(100);
+//			if (value < 0) {
+//				value = 0;
+//				timer2_flag = 0;
+//			}
+//			mode = DISPLAY;
 			break;
 		default:
 			break;
