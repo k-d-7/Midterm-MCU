@@ -834,7 +834,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  //Step12
+  //Step3
   setTimer1(100);
  8000612:	2064      	movs	r0, #100	; 0x64
  8000614:	f000 f900 	bl	8000818 <setTimer1>
